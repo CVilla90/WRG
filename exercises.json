@@ -1,0 +1,30 @@
+[
+  {
+    "muscleGroup": "back",
+    "exercises": ["Pull-ups", "Deadlifts", "Bent-over Rows", "Lat Pulldowns", "Seated Rows", "T-Bar Rows", "Single-Arm Dumbbell Rows", "Back Extensions", "Good Mornings", "Pull-over"]
+  },
+  {
+    "muscleGroup": "chest",
+    "exercises": ["Bench Press", "Push-ups", "Chest Fly", "Incline Bench Press", "Decline Bench Press", "Chest Dips", "Pec Deck Machine", "Cable Fly", "Svend Press", "Dumbbell Pullover"]
+  },
+  {
+    "muscleGroup": "legs",
+    "exercises": ["Squats", "Lunges", "Leg Press", "Deadlifts", "Leg Extensions", "Leg Curls", "Calf Raises", "Step-Ups", "Glute Bridges", "Bulgarian Split Squats"]
+  },
+  {
+    "muscleGroup": "shoulders",
+    "exercises": ["Shoulder Press", "Lateral Raises", "Front Raises", "Shrugs", "Reverse Fly", "Arnold Press", "Face Pull", "Upright Rows", "Barbell Overhead Press", "Pike Push-Up"]
+  },
+  {
+    "muscleGroup": "biceps",
+    "exercises": ["Bicep Curls", "Hammer Curls", "Preacher Curls", "Concentration Curls", "Cable Curl", "Zottman Curl", "Reverse Curl", "Barbell Curl", "Spider Curl", "Incline Dumbbell Curl"]
+  },
+  {
+    "muscleGroup": "triceps",
+    "exercises": ["Tricep Dips", "Skull Crushers", "Tricep Kickbacks", "Close-Grip Bench Press", "Overhead Tricep Extension", "Cable Pushdown", "Diamond Push-ups", "Tricep Overhead Press", "Single-Arm Cable Kickback", "Tate Press"]
+  },
+  {
+    "muscleGroup": "abs",
+    "exercises": ["Crunches", "Plank", "Russian Twists", "Leg Raises", "Bicycle Crunches", "Hanging Knee Raises", "Mountain Climbers", "V-Sits", "Ab Roller", "Wood Choppers"]
+  }
+]
