@@ -28,9 +28,17 @@ app.post('/api/generate-workout', (req, res) => {
 
 // Function to generate a workout routine
 function generateWorkout(muscleGroup, numberOfExercises, sets, reps) {
+  
+  // Check if muscleGroup is empty
+  if (!muscleGroup) {
+    return { error: "Please select a Muscle Group" };
+  }
+
+  // Initialize selectedExercises array
   let selectedExercises = [];
   numberOfExercises = Number(numberOfExercises);
 
+  // Handle 'fullBody' case
   if (muscleGroup === 'fullBody') {
     // Select specific number of exercises from each group
     for (const group of exercisesData) {
@@ -40,13 +48,18 @@ function generateWorkout(muscleGroup, numberOfExercises, sets, reps) {
         exercises: exercisesFromGroup
       });
     }
-  } else if (muscleGroup in exercises) {
-    // Select exercises from the specific muscle group
+  } 
+  // Handle specific muscle group case
+  else if (muscleGroup in exercises) {
     const exercisesFromGroup = getRandomSubset(exercises[muscleGroup], numberOfExercises);
     selectedExercises.push({
       muscleGroup: muscleGroup,
       exercises: exercisesFromGroup
     });
+  }
+  // If muscleGroup is not recognized
+  else {
+    return { error: "Invalid Muscle Group selected" };
   }
 
   return {

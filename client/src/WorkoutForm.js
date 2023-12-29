@@ -13,10 +13,10 @@ function WorkoutForm({ onSubmit }) {
   };
 
   return (
-    <div className="form-container"> {/* Add this wrapper div with class */}
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>
-          Muscle Group:
+        <div className="form-group">
+          <label>Muscle Group:</label>
           <select className="form-input" value={muscleGroup} onChange={(e) => setMuscleGroup(e.target.value)}>
           <option value="">Select a Muscle Group</option>
           <option value="back">Back</option>
@@ -28,23 +28,23 @@ function WorkoutForm({ onSubmit }) {
           <option value="abs">Abs</option>
           <option value="fullBody">Full Body</option>
         </select>
-      </label>
-      <br />
-      <label>
-        Number of Exercises:
-        <input type="number" value={numberOfExercises} onChange={(e) => setNumberOfExercises(e.target.value)} min="1" />
-      </label>
-      <br />
-      <label>
-        Sets:
-        <input type="number" value={sets} onChange={(e) => setSets(e.target.value)} min="1" />
-      </label>
-      <br />
-      <label>
-        Repetitions:
-        <input type="number" value={reps} onChange={(e) => setReps(e.target.value)} min="1" />
-      </label>
-      <br />
+        </div>
+
+        <div className="form-group">
+      <label>Number of Exercises:</label>
+      <input className="form-input" type="number" value={numberOfExercises} onChange={(e) => setNumberOfExercises(e.target.value)} min="1" />
+    </div>
+    
+    <div className="form-group">
+      <label>Sets:</label>
+        <input className="form-input" type="number" value={sets} onChange={(e) => setSets(e.target.value)} min="1" />
+        </div>
+
+    <div className="form-group">
+      <label>Repetitions:</label>
+        <input className="form-input" type="number" value={reps} onChange={(e) => setReps(e.target.value)} min="1" />
+        </div>
+
       <button className="form-button" type="submit">Generate Workout</button>
       </form>
     </div>
